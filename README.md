@@ -10,7 +10,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 - [Black Swan Robustness](/Black%20Swan%20Robustness)
 - [Anomaly Detection](/Anomaly%20Detection)
 
-|    *Lecture*                                              |    *Status*    | *Contributor(s)* |
+|    **Lecture**                                            |    *Status*    | *Contributor(s)* |
 |-----------------------------------------------------------|----------------|------------------|
 | Introduction                                              | Not started    |                  |
 | Deep Learning Review                                      | Not started    |                  |
