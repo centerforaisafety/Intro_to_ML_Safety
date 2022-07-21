@@ -1,6 +1,8 @@
 Adversarial Examples
 ====================
 
+**Contributor(s): Oliver Zhang**
+
 Distributional shifts or black swan events are not the only dangers when
 deploying machine learning systems. In the real world, there exist
 people with a wide range of intents, some of whom will act as
