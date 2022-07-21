@@ -10,27 +10,27 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 - [Black Swan Robustness](/Black%20Swan%20Robustness)
 - [Anomaly Detection](/Anomaly%20Detection)
 
-|    **Lecture**                                            |    *Status*    | *Contributor(s)* |
-|-----------------------------------------------------------|----------------|------------------|
-| Introduction                                              | Not started    |                  |
-| Deep Learning Review                                      | Not started    |                  |
-| Risk Decomposition                                        | Not started    |                  |
-| Accident Models                                           | Not started    |                  |
-| Black Swans                                               | Not started    |                  |
-| [Adversarial Robustness](/Adversarial%20Robustness)       | Needs revision | Oliver Zhang     |
-| [Black Swan Robustness](/Black%20Swan%20Robustness)       | Needs revision | Oliver Zhang     |
-| [Anomaly Detection](/Anomaly%20Detection)                 | Needs revision | Oliver Zhang     |
-| [Interpretable Uncertainty](/Interpretable%20Uncertainty) | Needs revision | Oliver Zhang     |
-| Transparency                                              | Not started    |                  |
-| Trojans                                                   | Not started    |                  |
-| Detecting Emergent Behavior                               | Not started    |                  |
-| Honest Models                                             | Not started    |                  |
-| Intrasystem Goals or Power Aversion                       | Not started    |                  |
-| Machine Ethics                                            | Not started    |                  |
-| ML for Improved Decision-Making                           | Not started    |                  |
-| ML for Cyberdefense                                       | Not started    |                  |
-| Cooperative AI                                            | Not started    |                  |
-| X-Risk                                                    | Not started    |                  |
-| Possible Existential Hazards                              | Not started    |                  |
-| Safety-Capabilities Balance                               | Not started    |                  |
-| Review and Conclusion                                     | Not started    |                  |
+|    **Lecture**                                            |    **Status**  | **Contributor(s)** |
+|-----------------------------------------------------------|----------------|--------------------|
+| Introduction                                              | Not started    |                    |
+| Deep Learning Review                                      | Not started    |                    |
+| Risk Decomposition                                        | Not started    |                    |
+| Accident Models                                           | Not started    |                    |
+| Black Swans                                               | Not started    |                    |
+| [Adversarial Robustness](/Adversarial%20Robustness)       | Needs revision | Oliver Zhang       |
+| [Black Swan Robustness](/Black%20Swan%20Robustness)       | Needs revision | Oliver Zhang       |
+| [Anomaly Detection](/Anomaly%20Detection)                 | Needs revision | Oliver Zhang       |
+| [Interpretable Uncertainty](/Interpretable%20Uncertainty) | Needs revision | Oliver Zhang       |
+| Transparency                                              | Not started    |                    |
+| Trojans                                                   | Not started    |                    |
+| Detecting Emergent Behavior                               | Not started    |                    |
+| Honest Models                                             | Not started    |                    |
+| Intrasystem Goals or Power Aversion                       | Not started    |                    |
+| Machine Ethics                                            | Not started    |                    |
+| ML for Improved Decision-Making                           | Not started    |                    |
+| ML for Cyberdefense                                       | Not started    |                    |
+| Cooperative AI                                            | Not started    |                    |
+| X-Risk                                                    | Not started    |                    |
+| Possible Existential Hazards                              | Not started    |                    |
+| Safety-Capabilities Balance                               | Not started    |                    |
+| Review and Conclusion                                     | Not started    |                    |
