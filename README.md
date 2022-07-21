@@ -12,7 +12,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 
 |    **Lecture**                                            |    **Status**  | **Contributor(s)** |
 |-----------------------------------------------------------|----------------|--------------------|
-| Background                                                                                      |
+| _Background_                                                                                      |
 | Introduction                                              | Not started    |                    |
 | Deep Learning Review                                      | Not started    |                    |
 | Risk Decomposition                                        | Not started    |                    |
