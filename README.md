@@ -11,7 +11,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 - [Anomaly Detection](/Anomaly%20Detection)
 
 |    Lecture                                                |    Status      | Contributor(s) |
-| ------------                                              | -----------    |                |
+|-----------------------------------------------------------|----------------|----------------|
 | Introduction                                              | Not started    |                |
 | Deep Learning Review                                      | Not started    |                |
 | Risk Decomposition                                        | Not started    |                |
