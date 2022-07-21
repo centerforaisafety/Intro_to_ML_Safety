@@ -2,7 +2,9 @@
 
 This repository contains notes for the [Intro to ML Safety](https://course.mlsafety.org/) course.
 
-Currently, the notes are not yet complete. We are looking for volunteers who will help us finish them. Ideally, notes will present the information from lectures and readings in a different way, so that students can have multiple angles of looking at the same material.
+Currently, the notes are not yet complete. We are looking for volunteers who will help us finish them. Ideally, notes will present the information from lectures and readings in a different way, so that students can have multiple angles of looking at the same material. Notes shouldn't just be notes from the lectures and ideally will include citations to papers.
+
+If you would like to contribute to the course notes, feel free to make a pull request! We will credit you here and in the course notes.
 
 Some prelimary notes on some of the topics already exist, but they aren't complete.
 
