@@ -11,7 +11,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 |    **Lecture**                                            |    **Status**  | **Contributor(s)** |
 |-----------------------------------------------------------|----------------|--------------------|
 | Introduction                                              | Not started    |                    |
-| Deep Learning Review                                      | Not started    |                    |
+| Deep Learning Review                                      | In Progress    | Nathaniel Li       |
 | Risk Decomposition                                        | Not started    |                    |
 | Accident Models                                           | Not started    |                    |
 | Black Swans                                               | Not started    |                    |
