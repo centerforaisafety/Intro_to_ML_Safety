@@ -9,3 +9,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 - [Interpretable Uncertainty](/Interpretable%20Uncertainty)
 - [Black Swan Robustness](/Black%20Swan%20Robustness)
 - [Anomaly Detection](/Anomaly%20Detection)
+
+|    Lecture   |    Status   |
+| ------------ | ----------- |
+| Introduction | Not started |
