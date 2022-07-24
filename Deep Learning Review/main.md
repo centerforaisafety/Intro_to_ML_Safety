@@ -262,7 +262,7 @@ Using naive gradient descent could pose three issues:
 * If the loss changes quickly in one direction but not another, the model could "bounce" along the sides of the loss landscape, leading to slow convergence.
 
 <p align=center>
-<img src="images/sgd_problems.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 14: Contour plot of a loss landscape, demonstrating slow convergence with gradient descent. Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
+<img src="images/sgd_problems.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 15: Contour plot of a loss landscape, demonstrating slow convergence with gradient descent. Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
 </p>
 
 Further exploration:
@@ -306,7 +306,7 @@ AdamW is a variation of Adam which incorporates $l_2$ regularization at the last
 $$\theta_{t+1} = \theta_t - \frac{\alpha v_{t+1}}{\sqrt{s_{t+1}} + \epsilon} - \lambda ||\theta||^2$$ 
 
 <p align=center>
-<img src="images/optimization_algorithms.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 15: Depiction of various optimization algorithms traversing a loss landscape (red is lower loss). Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
+<img src="images/optimization_algorithms.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 16: Depiction of various optimization algorithms traversing a loss landscape (red is lower loss). Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
 </p>
 
 ## Learning Rate Schedules
@@ -320,7 +320,7 @@ Learning rates are not always constant over training, and can decay following a 
 CIFAR-10 and CIFAR-100 are vision datasets with 10 and 100 classes respectively, such as airplane and cat (Krizhevsky et al. 2009). Each dataset has 50,000 training and 10,000 test images. CIFAR-10 and CIFAR-100 have mutually exclusive classes, making it useful anomaly detection research - one dataset can be set as in-distribution and the other as out-of-distribution (Hendrycks et al. 2019). CIFAR is useful for quick experimentation and accessible research, it is a small dataset with small images(32 by 32 pixels)
 
 <p align=center>
-<img src="images/cifar.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 16: Classes and sample images from CIFAR-10. Figure from (Krizhevsky et al. 2009)</i></figcaption>
+<img src="images/cifar.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 17: Classes and sample images from CIFAR-10. Figure from (Krizhevsky et al. 2009)</i></figcaption>
 </p>
 
 
