@@ -228,7 +228,7 @@ Lastly, Kullback-Leibler (KL) Divergence is another metric of the difference bet
 $$\text{KL}[p|| q] = -\sum_{i=1}^k p_i \log \frac{q_i}{p_i}$$
 
 Using an optimal encoding scheme for distribution $q$ to model distribution $p$, $\text{KL}[p\| q]$ measures the number of additional symbols necessary for encoding, compared to the optimal encoding. As a result, the KL divergence of $p$ and $q$ is the difference between the entropy of $p$ and the cross entropy between $p$ and $q$: 
-$$\text{KL}[p|| q] =  -\sum_{i=1}^k p_i \log \frac{q_i}{p_i} = -\sum_{i=1}^k p_i \log q_i - \sum_{i=1}^k p_i \log p_i = H(p; q) - H(p)$$
+$$\text{KL}[p|| q] =  -\sum_{i=1}^k p_i \log \frac{q_i}{p_i} = -(\sum_{i=1}^k p_i \log q_i - \sum_{i=1}^k p_i \log p_i) = H(p; q) - H(p)$$
 
 Further exploration:
 * https://brilliant.org/wiki/entropy-information-theory/
@@ -306,7 +306,7 @@ AdamW is a variation of Adam which incorporates $l_2$ regularization at the last
 $$\theta_{t+1} = \theta_t - \frac{\alpha v_{t+1}}{\sqrt{s_{t+1}} + \epsilon} - \lambda ||\theta||^2$$ 
 
 <p align=center>
-<img src="images/optimization_algorithms.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 15: Depiction of various optimization algorithms traversing a loss landscape (red is lower loss) <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
+<img src="images/optimization_algorithms.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 15: Depiction of various optimization algorithms traversing a loss landscape (red is lower loss). Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
 </p>
 
 ## Learning Rate Schedules
