@@ -1,5 +1,5 @@
 # Deep Learning Review
-**Contributor(s): Nathaniel Li, content inspired by lectures from Dan Hendrycks**
+**Contributor(s): Nathaniel Li**
 
 This is a review of the ML Safety Scholars deep learning module. Understanding deep learning is [important](https://forum.effectivealtruism.org/posts/7WXPkpqKGKewAymJf/how-to-pursue-a-career-in-technical-ai-alignment#Activities_that_are_useful_for_both_empirical_research_leads_and_contributors) for ML Safety, as it is the dominant paradigm within machine learning. This is a review, not an introduction to deep learning - instead, ML Safety Scholars suggests the first thirteen lectures of [EECS 498-007/598-005](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2019/schedule.html) as its introductory deep learning curriculum, and [here](https://forum.effectivealtruism.org/posts/7WXPkpqKGKewAymJf/how-to-pursue-a-career-in-technical-ai-alignment#Basic_deep_learning) are additional resources.
 
