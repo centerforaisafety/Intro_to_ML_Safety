@@ -161,7 +161,7 @@ ConvNeXT is a modern vision model with a surprisingly similar structure to ResNe
 <img src="images/resnet_convnext.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 9: Depiction of a single ResNet and ConvNext block. (Figure from Dan Hendrycks)</i></figcaption>
 </p>
 
-Both ResNet and ConvNeXT are deep networks with repeated blocks stacked on top of each other, and both employ residual connections in each block, although ConvNeXT uses more recent subcomponents such as GELU and layer norm, rather than ReLU and batch norm. (Liu et al. 2022) Nevertheless, the overall structure of modern vision models remain similar to the past, and ConvNeXT summarizes the best training practices and architectural developments of the past 7 years.
+Both ResNet and ConvNeXT are deep networks with repeated blocks stacked on top of each other, and both employ residual connections in each block. However, ConvNeXT uses more recent developments such as GELU and layer norm, rather than ReLU and batch norm (Liu et al. 2022). Nevertheless, the overall structure of modern vision models remain similar to the past, and ConvNeXT summarizes some key architectural developments of the past 7 years.
 
 Further exploration:
 * https://medium.com/augmented-startups/convnext-the-return-of-convolution-networks-e70cbe8dabcc
