@@ -369,7 +369,7 @@ Wu, Y., & He, K. (2018). Group Normalization (arXiv:1803.08494). arXiv. http://a
 
 
 
-[^1]: Batch and layer normalization are misnomers - while standardization adjusts data to have zero mean and unit variance, normalization actually refers to scaling the data into the range [0, 1].
+[^1]: Batch and layer normalization are misnomers - while standardization adjusts data to have zero mean and unit variance, normalization actually refers to scaling the data into the range [0, 1]. In the vector case, normalization means dividing by the norm.
 [^2]: In this example, the blue matrix is the input, the smaller green matrix is the convolutional kernel, and the red matrix on the right is the output.
 [^3]: Why would GPT waste half of its attention pattern by masking it out? This actually allows it to generate text a linear factor faster than BERT, GPT it only needs to compute the attention pattern related to the most recent word instead of recalculating the attention pattern for all words every time.
 <!--- Make sure to add links to the sections afterwards -->
