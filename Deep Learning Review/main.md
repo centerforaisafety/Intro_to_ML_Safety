@@ -104,7 +104,7 @@ $$\sigma(x) = \frac{1}{1 + {e^{-x}}}$$ It is a differentiable approximation to t
 <p align=center>
 <img src="images/step_function_sigmoid.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 5: Graph of step function (left) and sigmoid (right). Figure from (Chen et al. 2008)</i></figcaption>
 <br></br>
-Sigmoid normalizes activations from domain $\mathbb{R}$ to range $(0, 1)$, and has a biological interpretation as the firing rate of a neuron. However, it can be suboptimal due to [vanishing gradients](https://www.kdnuggets.com/2022/02/vanishing-gradient-problem.html), where gradients become smaller and smaller as the network becomes deeper.
+Sigmoid normalizes activations from domain $\mathbb{R}$ to range $(0, 1)$, and has a biological interpretation as the firing rate of a neuron. However, it can be suboptimal due to vanishing gradients, where gradients become smaller and smaller as the network becomes deeper.
 
 ## ReLU
 ReLU, or the Rectified Linear Unit, is an activation function: $\text{max}(0, x)$.
