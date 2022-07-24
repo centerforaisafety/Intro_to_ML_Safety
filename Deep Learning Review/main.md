@@ -291,7 +291,7 @@ Elements of $s$ are larger if they've had larger historical gradients, so AdaGra
 
 RMSProp is a "leaky" variation of AdaGrad which overcomes this issue, adding a decay rate hyperparameter, $\rho$, to the squared gradient calculation:
 $$s_{t+1} = \rho s_{t} + (1 - \rho) \nabla \theta_t^2$$
-$$\theta_{t+1} = \theta_t - \frac{\alpha \, \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
+$$\theta_{t+1} = \theta_t - \frac{\alpha \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
 
 ## Adam and AdamW
 
