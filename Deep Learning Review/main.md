@@ -12,8 +12,6 @@ We discuss the following topics:
 Table of Contents
 -----
 
-- [Deep Learning Review](#deep-learning-review)
-  - [Table of Contents](#table-of-contents)
 - [Model Architectures](#model-architectures)
   - [Residual Networks](#residual-networks)
   - [Batch and Layer Normalization](#batch-and-layer-normalization)
@@ -30,7 +28,7 @@ Table of Contents
 - [Losses](#losses)
   - [Minimum Description Length Principle](#minimum-description-length-principle)
   - [Entropy, Cross Entropy, and KL Divergence](#entropy-cross-entropy-and-kl-divergence)
-  - [$l_2$ Regularization](#l_2-regularization)
+  - [l2 Regularization](#l_2-regularization)
 - [Optimizers](#optimizers)
   - [Gradient Descent](#gradient-descent)
   - [SGD + Momentum](#sgd--momentum)
