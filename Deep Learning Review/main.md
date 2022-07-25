@@ -158,7 +158,7 @@ Further exploration:
 ConvNeXT is a modern vision model with a surprisingly similar structure to ResNet, despite being separated by many years in time.
 
 <p align=center>
-<img src="images/resnet_convnext.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 9: Depiction of a single ResNet and ConvNext block. (Figure from Dan Hendrycks)</i></figcaption>
+<img src="images/resnet_convnext.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 9: Depiction of a single ResNet and ConvNext block. Figure from Dan Hendrycks</i></figcaption>
 </p>
 
 Both ResNet and ConvNeXT are deep networks with repeated blocks stacked on top of each other, and both employ residual connections in each block. However, ConvNeXT uses more recent developments such as GELU and layer norm, rather than ReLU and batch norm (Liu et al. 2022). Nevertheless, the overall structure of modern vision models remain similar to the past, and ConvNeXT summarizes some key architectural developments of the past 7 years.
@@ -169,7 +169,7 @@ Further exploration:
 ## Self-Attention and Transformer Blocks
 Nathaniel could never explain self-attention as succinctly as this [high level overview](https://www.youtube.com/watch?v=-9vVhYEXeyQ) or [more thorough explanation](https://jalammar.github.io/illustrated-transformer/), so please check out these amazing resources and the original paper (Vaswani et al. 2017). Additionally, here is a drawing of the flow of attention and the dimensions at every step:
 <p align=center>
-<img src="images/attention_diagram.png" id="fig:modern" style="width:20cm"/><figcaption aria-hidden="true"><i>Figure 10: Please forgive Nathaniel's atrocious handwriting (Figure from Nathaniel Li)</i></figcaption>
+<img src="images/attention_diagram.png" id="fig:modern" style="width:20cm"/><figcaption aria-hidden="true"><i>Figure 10: Please forgive Nathaniel's atrocious handwriting. Figure from Nathaniel Li</i></figcaption>
 </p>
 
 Transformer blocks build upon the self-attention mechanism and have become a critical building block of most modern language models. They consist of self-attention and MLP layers, with residual connections and layer normalization between both layers.
