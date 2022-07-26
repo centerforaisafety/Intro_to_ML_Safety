@@ -285,7 +285,7 @@ Another optimization algorithm is AdaGrad, which employs different learning rate
 
 Let $s$ be the historical squared gradients for each parameter, summed over all previous iterations, and $\epsilon$ be a small number to avoid dividing by zero. Then, the AdaGrad update rule is:
 $$s_{t+1} = s_{t} + \nabla \theta_t^2$$
-$$\theta_{t+1} = \theta_t - \frac{\alpha \, \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
+$$\theta_{t+1} = \theta_t - \frac{\alpha \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
 
 Elements of $s$ are larger if they've had larger historical gradients, so AdaGrad has the effect of smoothing gradients, reducing progress along dimensions with larger gradients, and accelerating progress along dimensions with smaller gradients. Moreover, the elements of $s$ continue to increase with more iterations, effectively slowing down learning over time. This could be problematic if optimization halts before convergence.
 
