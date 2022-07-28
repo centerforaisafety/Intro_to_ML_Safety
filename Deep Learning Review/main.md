@@ -123,7 +123,7 @@ GELU, or the Gaussian Error Linear Unit, is an activation function: $x \times \P
 ## Softmax
 Softmax is another activation function, transforming input vectors in $\mathbb{R}^k$ to outputs in $(0, 1)^k$. The value of softmax in the input vector's $i$ th posiition is 
 
-$$\text{softmax}(x_1, \cdots, x_k)[i] = \frac{e^{x_i}}{\sum_{j=1}^k e^{x_j}}$$
+$$\text{softmax}(x_1, \cdots, x_k)[i] = e^{x_i} / \sum_{j=1}^k e^{x_j}$$
 
 
 The elements in the softmax vector are non-negative and sum to one, so softmax is frequently employed to transform a vector ("logits") into a final probability distribution used at the end of a neural network.
