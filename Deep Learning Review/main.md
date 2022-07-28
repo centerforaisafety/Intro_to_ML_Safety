@@ -233,6 +233,7 @@ $$\text{KL}[p|| q] =  -\sum_{i=1}^k p_i \log \frac{q_i}{p_i} = -(\sum_{i=1}^k p_
 Further exploration:
 * https://brilliant.org/wiki/entropy-information-theory/
 * https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained
+* https://raw.githubusercontent.com/mtomassoli/papers/master/inftheory.pdf
 
 
 ## $l_2$ Regularization
