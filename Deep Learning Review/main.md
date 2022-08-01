@@ -104,7 +104,7 @@ $$\sigma(x) = \frac{1}{1 + {e^{-x}}}$$ It is a differentiable approximation to t
 <p align=center>
 <img src="images/step_function_sigmoid.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 5: Graph of step function (left) and sigmoid (right). Figure from (Chen et al. 2008)</i></figcaption>
 <br></br>
-Sigmoid normalizes activations from domain $\mathbb{R}$ to range $(0, 1)$, and has a biological interpretation as the firing rate of a neuron. However, it can be suboptimal due to [vanishing gradients](https://www.kdnuggets.com/2022/02/vanishing-gradient-problem.html), where gradients become smaller and smaller as the network becomes deeper.
+Sigmoid normalizes activations from domain $\mathbb{R}$ to range $(0, 1)$, and has a biological interpretation as the firing rate of a neuron. However, it can be suboptimal due to vanishing gradients, where gradients become smaller and smaller as the network becomes deeper.
 
 ## ReLU
 ReLU, or the Rectified Linear Unit, is an activation function: $\text{max}(0, x)$.
@@ -123,7 +123,7 @@ GELU, or the Gaussian Error Linear Unit, is an activation function: $x \times \P
 ## Softmax
 Softmax is another activation function, transforming input vectors in $\mathbb{R}^k$ to outputs in $(0, 1)^k$. The value of softmax in the input vector's $i$ th posiition is 
 
-$$\text{softmax}(x_1, \cdots, x_k)[i] = \frac{e^{x_i}}{\sum_{j=1}^k e^{x_j}}$$
+$$\text{softmax}(x_1, \cdots, x_k)[i] = e^{x_i} / \sum_{j=1}^k e^{x_j}$$
 
 
 The elements in the softmax vector are non-negative and sum to one, so softmax is frequently employed to transform a vector ("logits") into a final probability distribution used at the end of a neural network.
@@ -158,10 +158,10 @@ Further exploration:
 ConvNeXT is a modern vision model with a surprisingly similar structure to ResNet, despite being separated by many years in time.
 
 <p align=center>
-<img src="images/resnet_convnext.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 9: Depiction of a single ResNet and ConvNext block. (Figure from Dan Hendrycks)</i></figcaption>
+<img src="images/resnet_convnext.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 9: Depiction of a single ResNet and ConvNext block. Figure from Dan Hendrycks</i></figcaption>
 </p>
 
-Both ResNet and ConvNeXT are deep networks with repeated blocks stacked on top of each other, and both employ residual connections in each block, although ConvNeXT uses more recent subcomponents such as GELU and layer norm, rather than ReLU and batch norm. (Liu et al. 2022) Nevertheless, the overall structure of modern vision models remain similar to the past, and ConvNeXT summarizes the best training practices and architectural developments of the past 7 years.
+Both ResNet and ConvNeXT are deep networks with repeated blocks stacked on top of each other, and both employ residual connections in each block. However, ConvNeXT uses more recent developments such as GELU and layer norm, rather than ReLU and batch norm (Liu et al. 2022). Nevertheless, the overall structure of modern vision models remain similar to the past, and ConvNeXT summarizes some key architectural developments of the past 7 years.
 
 Further exploration:
 * https://medium.com/augmented-startups/convnext-the-return-of-convolution-networks-e70cbe8dabcc
@@ -169,7 +169,7 @@ Further exploration:
 ## Self-Attention and Transformer Blocks
 Nathaniel could never explain self-attention as succinctly as this [high level overview](https://www.youtube.com/watch?v=-9vVhYEXeyQ) or [more thorough explanation](https://jalammar.github.io/illustrated-transformer/), so please check out these amazing resources and the original paper (Vaswani et al. 2017). Additionally, here is a drawing of the flow of attention and the dimensions at every step:
 <p align=center>
-<img src="images/attention_diagram.png" id="fig:modern" style="width:20cm"/><figcaption aria-hidden="true"><i>Figure 10: Please forgive Nathaniel's atrocious handwriting (Figure from Nathaniel Li)</i></figcaption>
+<img src="images/attention_diagram.png" id="fig:modern" style="width:20cm"/><figcaption aria-hidden="true"><i>Figure 10: Please forgive Nathaniel's atrocious handwriting. Figure from Nathaniel Li</i></figcaption>
 </p>
 
 Transformer blocks build upon the self-attention mechanism and have become a critical building block of most modern language models. They consist of self-attention and MLP layers, with residual connections and layer normalization between both layers.
@@ -233,6 +233,7 @@ $$\text{KL}[p|| q] =  -\sum_{i=1}^k p_i \log \frac{q_i}{p_i} = -(\sum_{i=1}^k p_
 Further exploration:
 * https://brilliant.org/wiki/entropy-information-theory/
 * https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained
+* https://raw.githubusercontent.com/mtomassoli/papers/master/inftheory.pdf
 
 
 ## $l_2$ Regularization
@@ -262,7 +263,7 @@ Using naive gradient descent could pose three issues:
 * If the loss changes quickly in one direction but not another, the model could "bounce" along the sides of the loss landscape, leading to slow convergence.
 
 <p align=center>
-<img src="images/sgd_problems.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 14: Contour plot of a loss landscape, demonstrating slow convergence with gradient descent. Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
+<img src="images/sgd_problems.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 15: Contour plot of a loss landscape, demonstrating slow convergence with gradient descent. Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
 </p>
 
 Further exploration:
@@ -285,13 +286,13 @@ Another optimization algorithm is AdaGrad, which employs different learning rate
 
 Let $s$ be the historical squared gradients for each parameter, summed over all previous iterations, and $\epsilon$ be a small number to avoid dividing by zero. Then, the AdaGrad update rule is:
 $$s_{t+1} = s_{t} + \nabla \theta_t^2$$
-$$\theta_{t+1} = \theta_t - \frac{\alpha \, \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
+$$\theta_{t+1} = \theta_t - \frac{\alpha \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
 
 Elements of $s$ are larger if they've had larger historical gradients, so AdaGrad has the effect of smoothing gradients, reducing progress along dimensions with larger gradients, and accelerating progress along dimensions with smaller gradients. Moreover, the elements of $s$ continue to increase with more iterations, effectively slowing down learning over time. This could be problematic if optimization halts before convergence.
 
 RMSProp is a "leaky" variation of AdaGrad which overcomes this issue, adding a decay rate hyperparameter, $\rho$, to the squared gradient calculation:
 $$s_{t+1} = \rho s_{t} + (1 - \rho) \nabla \theta_t^2$$
-$$\theta_{t+1} = \theta_t - \frac{\alpha \, \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
+$$\theta_{t+1} = \theta_t - \frac{\alpha \nabla\theta_t^2}{\sqrt{s} + \epsilon}$$
 
 ## Adam and AdamW
 
@@ -306,7 +307,7 @@ AdamW is a variation of Adam which incorporates $l_2$ regularization at the last
 $$\theta_{t+1} = \theta_t - \frac{\alpha v_{t+1}}{\sqrt{s_{t+1}} + \epsilon} - \lambda ||\theta||^2$$ 
 
 <p align=center>
-<img src="images/optimization_algorithms.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 15: Depiction of various optimization algorithms traversing a loss landscape (red is lower loss). Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
+<img src="images/optimization_algorithms.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 16: Depiction of various optimization algorithms traversing a loss landscape (red is lower loss). Figure from <a href="https://www.youtube.com/watch?v=YnQJTfbwBM8">Justin Johnson</a></i></figcaption>
 </p>
 
 ## Learning Rate Schedules
@@ -317,10 +318,10 @@ Learning rates are not always constant over training, and can decay following a 
 # Datasets
 
 ## CIFAR
-CIFAR-10 and CIFAR-100 are vision datasets with 10 and 100 classes respectively, such as airplane and cat (Krizhevsky et al. 2009). Each dataset has 50,000 training and 10,000 test images. CIFAR-10 and CIFAR-100 have mutually exclusive classes, making it useful anomaly detection research - one dataset can be set as in-distribution and the other as out-of-distribution (Hendrycks et al. 2019). CIFAR is useful for quick experimentation and accessible research, it is a small dataset with small images(32 by 32 pixels)
+CIFAR-10 and CIFAR-100 are vision datasets with 10 and 100 classes respectively, such as airplane and cat (Krizhevsky et al. 2009). Each dataset has 50,000 training and 10,000 test images. CIFAR-10 and CIFAR-100 have mutually exclusive classes, making it useful anomaly detection research - one dataset can be set as in-distribution and the other as out-of-distribution (Hendrycks et al. 2019). CIFAR contains small images (32 by 32 pixels) useful for quick experimentation and accessible research. 
 
 <p align=center>
-<img src="images/cifar.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 16: Classes and sample images from CIFAR-10. Figure from (Krizhevsky et al. 2009)</i></figcaption>
+<img src="images/cifar.png" id="fig:modern" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 17: Classes and sample images from CIFAR-10. Figure from (Krizhevsky et al. 2009)</i></figcaption>
 </p>
 
 
