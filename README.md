@@ -19,8 +19,8 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 | [Black Swan Robustness](/Black%20Swan%20Robustness)       | Needs revision | Oliver Zhang       |
 | [Anomaly Detection](/Anomaly%20Detection)                 | Needs revision | Oliver Zhang       |
 | [Interpretable Uncertainty](/Interpretable%20Uncertainty) | Needs revision | Oliver Zhang       |
-| Transparency                                              | Not started    |                    |
-| Trojans                                                   | Not started    |                    |
+| Transparency                                              | Not started    | Ethan Gutierrez    |
+| Trojans                                                   | Not started    | Ethan Gutierrez    |
 | Detecting Emergent Behavior                               | Not started    |                    |
 | Honest Models                                             | Not started    |                    |
 | Intrasystem Goals or Power Aversion                       | Not started    |                    |
