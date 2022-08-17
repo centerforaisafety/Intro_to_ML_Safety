@@ -25,7 +25,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 | Honest Models                                             | Not started    |                    |
 | Intrasystem Goals or Power Aversion                       | Not started    |                    |
 | Machine Ethics                                            | Not started    |                    |
-| ML for Improved Decision-Making                           | Not started    |                    |
+| [ML for Improved Decision-Making](ML%20for%20Improved%20Decision-Making)   | Ready for Review    | Nathaniel Li       |
 | ML for Cyberdefense                                       | Not started    |                    |
 | Cooperative AI                                            | Not started    |                    |
 | X-Risk                                                    | Not started    |                    |
