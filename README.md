@@ -21,13 +21,13 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 | [Interpretable Uncertainty](/Interpretable%20Uncertainty) | Needs revision | Oliver Zhang       |
 | Transparency                                              | Not started    | Ethan Gutierrez    |
 | Trojans                                                   | Not started    | Ethan Gutierrez    |
-| Detecting Emergent Behavior                               | Not started    |                    |
+| Detecting Emergent Behavior                               | Not started    | Bilal Chughtai     |
 | Honest Models                                             | Not started    |                    |
 | Intrasystem Goals or Power Aversion                       | Not started    |                    |
 | Machine Ethics                                            | Not started    |                    |
 | [ML for Improved Decision-Making](ML%20for%20Improved%20Decision-Making)   | Ready for Review    | Nathaniel Li       |
 | ML for Cyberdefense                                       | Not started    |                    |
-| Cooperative AI                                            | Not started    |                    |
+| Cooperative AI                                            | Not started    | Bilal Chughtai     |
 | X-Risk                                                    | Not started    |                    |
 | Possible Existential Hazards                              | Not started    |                    |
 | Safety-Capabilities Balance                               | Not started    |                    |
