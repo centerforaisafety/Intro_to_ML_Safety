@@ -256,9 +256,11 @@ Concrete examples include
 Care should therefore be taken for advances to lead to *differential progress* on cooperation. 
  
 # References
+Dafoe et al. (2020), Open Problems in Cooperative AI, https://arxiv.org/pdf/2012.08630.pdf
+
 <p id="five_rules">
 
-MA Nowak (2006), Five Rules for the Evolution of Cooperation, https://www.science.org/doi/abs/10.1126/science.1133755
+Nowak (2006), Five Rules for the Evolution of Cooperation, https://www.science.org/doi/abs/10.1126/science.1133755
 
 <p id=dispositions>
 
