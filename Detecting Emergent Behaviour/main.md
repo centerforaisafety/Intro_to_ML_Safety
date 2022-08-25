@@ -59,9 +59,11 @@ The *cobra effect* is an anecdote of an occurrence in India during British rule.
 
 If one seeks to optimise website user satisfaction, a proxy may be the number of clicks. This can be gamed through promoting clickbait, or through addicting users. The AI agent does not care whether the content converges to the user's interests, or the users interests converge to the content. This observation has been termed [auto-induced distributional shift](#krueger) and has been shown to be detectable in principle.
 
-<figure align=center>
+<p align=center>
+<figure>
 <img src="images/clickbait.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 5: Clickbait is a pathway to radicalize users and change their preferences. The red paths of influence should be disincentized, while the green paths are okay. Image credit David Krueger.</i></figcaption>
 </figure>
+</p>
 
 Students are very familiar with proxy gaming. The university or schools goal to teach students is measured using the proxy of exam results. This can be gamed through working on exam technique, or cramming.
 
