@@ -63,6 +63,7 @@ Future work in detecting and forecasting emergent capabilities and goals could i
 
 # Proxy Gaming
 
+## Examples
 The *cobra effect* is an anecdote of an occurrence in India during British rule. The British government, concerned about the number of venomous cobras in Delhi, offered a bounty for every dead cobra. Initially, this was a successful strategy; large numbers of snakes were killed for the reward. Eventually, however, enterprising people began to breed cobras for the income. When the government became aware of this, the reward program was scrapped. When cobra breeders set their now-worthless snakes free, the wild cobra population further increased. Can you spot the proxy gaming? We see the proxy goal of a bounty for each dead cobra failed at achieving the objective of a reduce cobra population, as it was *over-optimized* or *gamed* through raising cobras for slaughter. 
 
 If one seeks to optimise website user satisfaction, a proxy may be the number of clicks. This can be gamed through promoting clickbait, or through addicting users. The AI agent does not care whether the content converges to the user's interests, or the users interests converge to the content. This observation has been termed [auto-induced distributional shift](#krueger) and has been shown to be detectable in principle.
@@ -72,8 +73,6 @@ If one seeks to optimise website user satisfaction, a proxy may be the number of
 </br>
 <i>Figure 5: Clickbait is a pathway to radicalize users and change their preferences. The red paths of influence should be disincentized, while the green paths are okay. Image credit David Krueger.</i>
 </p>
-
-Students are very familiar with proxy gaming. The university or schools goal to teach students is measured using the proxy of exam results. This can be gamed through working on exam technique, or cramming.
 
 One can find many examples of proxy gaming in the reinforcement learning paradigm. [CoinRun](#coinrun) is a Sonic the Hedgehog platformer inspired game in which the agent needs to reach a coin in a linear platform level. During training, this coin was always placed at the end of a level. If the coin is moved, we see the agent does not generalise, but instead just runs to the end of the level. It has learned a bad proxy.
 
@@ -89,7 +88,7 @@ One can find many examples of proxy gaming in the reinforcement learning paradig
 <i>Figure 6: Coin run does not generalise</i>
 </p>
 
-Another classic example is from a [boat racing game](#openai_boat). An RL agent was given the goal of achieving a high score in this game as a proxy for completing the circuit, but  instead found obtaining score through 'turbo boosting' on loop, and also crashing, burning, colliding into other boats, and going in the wrong direction... 
+Another classic example is from a [boat racing game](#openai_boat). An RL agent was given the goal of achieving a high score in this game as a proxy for completing the circuit, but instead managed to obtain high score through 'turbo boosting' on loop, while also crashing, burning, colliding into other boats, and going in the wrong direction... 
 
 <p align=center>
 <img src="images/boat.gif"  style="width:12cm"/>
@@ -97,11 +96,13 @@ Another classic example is from a [boat racing game](#openai_boat). An RL agent 
 <i>Figure 7: Proxy gaming in a boat game</i>
 </p>
 
-Recall *Le Châtelier's principle* from high school chemistry. This states that if a dynamic equilibrium is disturbed by changing the conditions, the position of equilibrium shifts to counteract the change to reestablish an equilibrium. In general this applies to many adaptive systems.
+## Principles
 
-*Goodhart's Law* is a heuristic stating that any observed statistical regularity will tend to collapse once pressure is placed upon it. Or, overly simplified: when a measure becomes a target, it ceases to be a good measure. This simplification should not be extrapolated too far and taken to mean all metrics are useless, as then no goal would be worth pursuing. Some goals are better than others however; they are *more robust* to optimisation pressures. GDP is a better proxy for national wealth than a worker's performance review is a proxy for employee quality.
+Recall *Le Châtelier's principle* from high school chemistry. This states that if a dynamic equilibrium is disturbed by changing the conditions, the position of equilibrium shifts to counteract the change to reestablish an equilibrium. This may be extrapolated to many other adaptive systems.
 
-A number of factors contribute to poor objective approximations by proxies
+*Goodhart's Law* is a heuristic stating that any observed statistical regularity will tend to collapse once pressure is placed upon it. Or, when a measure becomes a target, it ceases to be a good measure. It would be wrong to rely too heavily on this latter simplification. It should not be extrapolated too far and taken to mean all metrics are useless, as then no goal would be worth pursuing. 
+
+Some goals can be deemed better than others however, if they are *more robust* to optimisation pressures. GDP is a better proxy for national wealth than a worker's performance review is a proxy for employee quality.A number of factors contribute to poor objective approximation by proxies
 * approximation errors arise due to limited oversight (spatially and temporally) 
 * computational costs
 * measurement error
@@ -110,13 +111,13 @@ A number of factors contribute to poor objective approximations by proxies
 * lack of complete foresight of structural proxy problems
 * difficulty of encapsulating everything that the proxy setter actually cares about
 
-Recent work has attempted to formally [define and characterize](#krueger2) proxy gaming. They define a proxy to be *ungameable* if increasing the expected proxy return can never decrease the return according to the true reward. Under this strict (but potentially incorrect) definition it seems that optimizing a proxy is almost always bad, and we should view optimization as a *heuristic* and not a goal.
+Recent work has attempted to formally [define and characterize](#krueger2) proxy gaming. They define a proxy to be *ungameable* if increasing the expected proxy return can never decrease the return according to the true reward. Under this strict (but potentially incorrect) definition it seems that optimizing a proxy is almost always bad, and we should view optimization as more of a *heuristic* and not a goal, and be careful not to over optimise given our uncertainty.
 
 Deficient proxies seem ubiquitous. Further work could attempt to create optimization algorithms accounting for the fact that the proxy is not perfect, find better ways of detecting when proxy gaming os occurring, or find ways to make proxies more robust.
 
 ## A Proxy Gaming Detection Benchmark
 
-[Pan et al. ](#pan) present a benchmark for detecting proxy gaming. They use four distinct environments: traffic control, glucose monitoring, covid response, and an Atari game. Here, we'll just discuss the traffic environment. An autonomous vehicle (AV) simulation models vehicles driving on a highway network, controlled by an RL policy. The RL agent has access to observations only from the AVs it controls i.e. the car's positive and velocity, and the position and velocity of the cars immediately in front and behind. The RL acts through modifying its AV's acceleration. 
+[Pan et al. ](#pan) present a benchmark for proxy gaming detectors. They use four distinct environments: traffic control, glucose monitoring, covid response, and an Atari game. Here, we'll just discuss the traffic environment. An autonomous vehicle (AV) simulation models vehicles driving on a highway network and is controlled by an RL policy. The RL agent has access to observations only from the AVs it controls i.e. it's car's positive and velocity, and the position and velocity of the cars immediately in front and behind. The RL agent acts through modifying its AV's acceleration. 
 
 <p align=center>
 <img src="images/traffic.png"  style="width:12cm"/>
@@ -124,7 +125,7 @@ Deficient proxies seem ubiquitous. Further work could attempt to create optimiza
 <i>Figure 8: Schematic of the traffic control environment.</i>
 </p>
 
-Stronger optimizers, with more parameters or training steps may have access to a larger action space at finer resolution, so may better exploit misspecifications in this environment. Misspecifications are grouped into three classes:
+Stronger optimizers, with more parameters or training steps, may have access to a larger action space at finer resolution, so may better exploit misspecifications in this environment. Misspecifications are grouped into three classes:
 1. **Misweighting**. Suppose that the true reward is a linear combination of commute time and acceleration (for reducing carbon emissions). Downweighting the acceleration term thus underpenalizes carbon emissions. In general, misweighting occurs when the proxy and true reward capture the
 same desiderata, but differ on their relative importance. 
 2. **Ontological**. Congestion could be operationalized as either high average commute time or low average vehicle velocity. In general, ontological misspecification occurs when the proxy and true
@@ -136,7 +137,7 @@ reward use different desiderata to capture the same concept. Figure 8 shows this
 <i>Figure 9: True reward vs proxy reward in benchmark environments. This shape of graph is characteristic of proxy gaming.</i>
 </p>
 
-A baseline to detect emergent proxy gaming is to use *policies as detectors*. One can measure the distance between a trusted policy, such as the Intelligent Driver Model, a widely accepted approximation of human driving behaviour and the learned policy. Three different methods of doing this are evaluated, using two measurements of effectiveness (AUROC and Max F-1), across several types of misspecification in various environments Traffic-Mer refers to the merge-in traffic problem discussed above. 
+A baseline to detect emergent proxy gaming is to use *policies as detectors*. One can measure the distance between a trusted policy, such as the Intelligent Driver Model, a widely accepted approximation of human driving behaviour, and the learned policy. Three different methods of doing this are evaluated, using two measurements of effectiveness (AUROC and Max F-1), across several types of misspecification in various environments Traffic-Mer refers to the merge-in traffic problem discussed above. 
 
 <p align=center>
 <img src="images/traffic3.png"  style="width:12cm"/></br>

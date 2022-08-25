@@ -1,7 +1,7 @@
 # Cooperative AI
 **Contributor(s): Bilal Chughtai**
 
-Cooperative AI is an emerging research area even within safety. As such, this lecture focuses on motivation and background concepts. These written notes go further, presenting promising future directions and representative examples of work in them.
+Cooperative AI is an emerging research area even within safety. As such, this lecture focuses primarily on motivation and background concepts. These written notes go further, presenting promising future directions and representative examples of work in them.
 
 # Motivation
 
@@ -12,8 +12,8 @@ Problems of cooperation — in which agents have opportunities to improve their 
 * Curtailing the spread of a deadly pandemic requires the coordination of every individual in a society.
 
 Equally, cooperation is in no small part responsible for human civilization and the success of the human species. Some of our *greatest successes* can be attributed to cooperation
-* Trade allows society to progress past being solely agricultural, through allowing for highly specialised workers. This significantly increased economic productivity.
-* Modern economies of scale require a high degree of cooperation between different industries and are integral to today's society.
+* Trade allowed society to progress past being solely agricultural, through allowing for highly specialised workers. This significantly increased economic productivity.
+* Modern economies of scale require a high degree of cooperation between different industries in different nation states.
   
 As our societies, economies, and militaries become ever more powerful and connected, the need for cooperation becomes greater. Advanced AI will only exacerbate existing cooperation problems through increasing power and interconnectedness of actors further. We've seen examples of AI induced cooperation failures already - the 2010 flash crash was a trillion dollar market crash caused by errors with artificial intelligence powered automated trading systems (though a consensus on the precise reasons has still not been reached).
 
