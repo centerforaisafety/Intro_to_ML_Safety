@@ -18,14 +18,14 @@ Equally, cooperation is in no small part responsible for human civilization and 
 As our societies, economies, and militaries become ever more powerful and connected, the need for cooperation becomes greater. Advanced AI will only exacerbate existing cooperation problems through increasing power and interconnectedness of actors further. We've seen examples of AI induced cooperation failures already - the 2010 flash crash was a trillion dollar market crash caused by errors with artificial intelligence powered automated trading systems (though a consensus on the precise reasons has still not been reached).
 
 <p align=center>
-<img src="images/flash_crash.jpg" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 1: The 2010 Flash Crash</i></figcaption>
+<img src="images/flash_crash.jpg" style="width:12cm"/></br><i>Figure 1: The 2010 Flash Crash</i>
 </p>
 
 
 Cooperative AI seeks to reverse these problems. It asks *how can we use advances in AI to help us solve cooperation problems?* Prior work in AI safety has focussed primarily on the single-single paradigm, in which a single human interacts with a single AI agent. This seems insufficient - it seems likely that in future we will need to foster cooperation between between complex systems of humans, machines and institutions of both. Cooperative AI improves AI safety through reducing risks from cooperation failures. 
 
 <p align=center>
-<img src="images/system.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 2: Complex future institutions of humans (H) and robots (R) cooperating. Image credit Lewis Hammond. </i></figcaption>
+<img src="images/system.png" style="width:12cm"/></br><i>Figure 2: Complex future institutions of humans (H) and robots (R) cooperating. Image credit Lewis Hammond. </i>
 </p>
 
 # Mathematical Preliminaries
@@ -51,7 +51,7 @@ In words, a game defines a set of possible strategies and payoffs for each agent
 These can be represented in a **payoff matrix**.
 
 <p align=center>
-<img src="images/prisoners_dilemma.png" id="fig:PD" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 3: Payoff matrix for the Prisoner's dilemma. </i></figcaption>
+<img src="images/prisoners_dilemma.png" id="fig:PD" style="width:12cm"/></br><i>Figure 3: Payoff matrix for the Prisoner's dilemma. </i>
 </p>
 
 We see betraying a partner offers greater reward than cooperating with them, so all purely rational self-interested prisoners will betray the other, despite mutual cooperation yielding a greater reward. 
@@ -69,7 +69,7 @@ Given finite games, one can prove at least one Nash equilibrium always exists. T
 **Example 2:** *Stag Hunt*. Let us consider one more example of a non-cooperative game. In this game, there are two hunters. There are two rabbits and one stag in the hunting range. Before leaving to go hunt, each hunter can only take equipment that catches one type of animal. The stag has more meat than the two rabbits combined, but the hunters have to cooperate with each other to catch it, while the hunter that catches rabbits can catch all the rabbits. The payoff matrix is as follows:
 
 <p align=center>
-<img src="images/stag_hunt.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 4: Payoff matrix for Stag Hunt. </i></figcaption>
+<img src="images/stag_hunt.png" style="width:12cm"/></br><i>Figure 4: Payoff matrix for Stag Hunt. </i>
 </p>
 
 Here, there is no dominant strategy, and both diagonal entries are Nash equilibria. If hunter A knows that hunter B is going to catch stag, then hunter A should also take equipment to catch the stag. If hunter A knows that hunter B is going to catch the rabbits, then that hunter should go to catch a rabbit too! Once again, self interested agents do not necessarily achieve the optimal outcome, so cooperation is important.
@@ -94,7 +94,7 @@ A natural measure of how cooperative some game outcome is is its distance to the
 * For the prisoners dilemma, we see the mutually non cooperative outcome is far from the Pareto-frontier
 
 <p align=center>
-<img src="images/pareto.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 5: Pareto efficiency of the Prisoner's dilemma. Image credit Lewis Hammond. </i></figcaption>
+<img src="images/pareto.png"  style="width:12cm"/></br><i>Figure 5: Pareto efficiency of the Prisoner's dilemma. Image credit Lewis Hammond. </i>
 </p>
 
 To define this distance, one needs some ordering on the space of outcomes. 
@@ -132,7 +132,7 @@ One can learn a lot through studying mechanisms facilitating cooperation in the 
 Observe that natural selection can *oppose* cooperation by default. Suppose initially there exists some group of cooperators. If there's variation among the individuals, someone with more defecting, or non cooperating dispositions may emerge. This individual may free ride (see above) on the efforts of the collective, and obtain a comparative evolutionary advantage. Natural selection favours this evolutionary fitness, and so over time the group may become more defective. This raises the question, how does cooperation arise at all in nature? 
 
 <p align=center>
-<img src="images/natural_selection.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 6: Evolution may drive down cooperation. Image credit MA Nowak.  </i></figcaption>
+<img src="images/natural_selection.png" style="width:12cm"/></br><i>Figure 6: Evolution may drive down cooperation. Image credit MA Nowak.  </i>
 </p>
 
 Nowak presents a theory called the "[Five Rules for the Evolution of Cooperation](#five_rules)". 
@@ -143,13 +143,13 @@ Nowak presents a theory called the "[Five Rules for the Evolution of Cooperation
 5. Group selection is the idea that competition is not only between individuals, but also between groups. Groups with a higher proportion of cooperative members may outcompete groups with a lower such proportion. For example, if one group has individuals more willing to go to war and fight, being less egoistic than the other group, they may win against the other group. Or, a group more willing to cooperate may outbreed the other and dominate without that way without genocide. 
 
 <p align=center>
-<img src="images/five_rules.jpg" id="fig:PD" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 7: Five rules for the evolution of cooperation. Image credit MA Nowak.  </i></figcaption>
+<img src="images/five_rules.jpg" id="fig:PD" style="width:12cm"/></br><i>Figure 7: Five rules for the evolution of cooperation. Image credit MA Nowak.  </i>
 </p>
 
 Another observation from nature is that micromotives need not necessarily match macrobehaviour. That is to say, groups of individuals behave as *complex systems*, and alignment of components does not guarantee alignment of the entire system. For instance, let's say agents have a preference for more than $1/3$ of their neighbours to belong to the same group, else move. Then this mild in-group preference gets exacerbated and the individuals become highly segregated.
 
 <p align=center>
-<img src="images/micromotives.gif" style="width:10cm"/><figcaption aria-hidden="true"><i>Figure 8: Schelling’s segregation model. Micromotives don't match macrobehaviour. </i></figcaption>
+<img src="images/micromotives.gif" style="width:10cm"/></br><i>Figure 8: Schelling’s segregation model. Micromotives don't match macrobehaviour. </i>
 </p>
 
 Turning to humans in particular, we are endowed with a set of [dispositions](#dispositions) to cooperate.
@@ -163,7 +163,7 @@ Turning to humans in particular, we are endowed with a set of [dispositions](#di
 Cooperation can often increase expected utility. This may relate to morality. The `morality-as-cooperation' theory asserts that "all of human morality is an attempt to solve a cooperative problem".
 
 <p align=center>
-<img src="images/morality.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 9: The morality-as-cooperation theory. </i></figcaption>
+<img src="images/morality.png" style="width:12cm"/></br><i>Figure 9: The morality-as-cooperation theory. </i>
 </p>
 
 ## Cooperative Intelligence in AI 
@@ -189,7 +189,7 @@ This is shown to work experimentally in an 'Overcooked' inspired gridworld, wher
 
 
 <p align=center>
-<img src="images/toomanycooks.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 10: Experimental setup in Too Many Cooks: Coordinating Multi-Agent Collaboration Through Inverse Planning. Image credit Wu et al. </i></figcaption>
+<img src="images/toomanycooks.png" style="width:12cm"/></br><i>Figure 10: Experimental setup in Too Many Cooks: Coordinating Multi-Agent Collaboration Through Inverse Planning. Image credit Wu et al. </i>
 </p>
 
 
@@ -215,7 +215,7 @@ This leads us to the idea of *open source game theory*.
 Consider the prisoners dilemma. Suppose instead of actions, AI agents instead submit programs returning cooperate or defect, such as
 
 <p align=center>
-<img src="images/committment.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 11: A verifiable program for the Prisoners dilemma. </i></figcaption>
+<img src="images/committment.png" style="width:12cm"/></br><i>Figure 11: A verifiable program for the Prisoners dilemma. </i>
 </p>
 
 Then (my_program, my_program) determines a [*program equilibrium*](#program_equilibrium), which it is irrational to deviate from. Note this is a Nash equilibrium in the game where players choose programs, but not in the original game. 
@@ -227,7 +227,7 @@ Then (my_program, my_program) determines a [*program equilibrium*](#program_equi
 Institutions are proven ways by which human society has becomes more cooperative. Norms, laws, and other governance structures are critical to the functioning of modern civilization. Can AI help us create more rational and better functioning institutions for humans?
 
 <p align=center>
-<img src="images/economist1.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 12: The AI economist world </i></figcaption>
+<img src="images/economist1.png" style="width:12cm"/></br><i>Figure 12: The AI economist world </i>
 </p>
 
 [The AI Economist](#ai_economist) investigates whether in principle an AI can learn a taxation policy that most effectively trades off between productivity and equality. RL agents are spawned in a gather-and-build gridworld, who move around, collect resources such as wood and stone, and build houses to gain coins. Mechanisms for trade allow the agents to exchange resources for coin. Agents are initialised with random skill levels for the various tasks they can complete, and each task carries a labour cost to bound the system. These agents optimise to maximise coin and minimise labour. 
@@ -235,7 +235,7 @@ Institutions are proven ways by which human society has becomes more cooperative
 A second type of agent, the 'social planner', is simultaneously training to optimize tax and redistribution policy to improve social outcomes. In general, high taxation reduces productivity as productive workers are disincentivised to work due to added labour costs for reduced economic benefit, while low taxation raises inequality.
 
 <p align=center>
-<img src="images/economist2.png" style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 13: The equality-productivty trade off and wealth distribution in the AI economist model </i></figcaption>
+<img src="images/economist2.png" style="width:12cm"/></br><i>Figure 13: The equality-productivty trade off and wealth distribution in the AI economist model </i>
 </p>
 
 The Pareto boundary defines the set of maximal trade-offs. The AI economist beats other tax policies from the economic literature. On the right, we see taxes impact productivity (total income, represented by the area of the big squares), and equality (the relative difference in sizes of the smaller squares). The AI Economist achieves the best trade-off

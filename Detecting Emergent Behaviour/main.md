@@ -10,7 +10,9 @@ It is difficult to ensure the safety of models if we do not know what they are c
 Some models possess quantitative capabilities that are hard to predict. For example, an [adversarially trained MNIST model](#mnist) has it's accuracy discontinuously increase as it's capability scale increases. TODO: define what precisely this means
 
 <p align=center>
-<img src="images/MNIST.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 1: MNIST classification accuracy suddenly increases as capacity is scaled. </i></figcaption>
+<img src="images/MNIST.png"  style="width:12cm"/>
+</br>
+<i>Figure 1: MNIST classification accuracy suddenly increases as capacity is scaled. </i>
 </p>
 
 ## Unanticipated Behaviour
@@ -21,7 +23,9 @@ More problematically, some capabilities can be entirely *unanticipated*. Qualita
 * program synthesis: writing code
 
 <p align=center>
-<img src="images/unanticipated.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 2: Large language models have untancipated spontaneously emergent capabilities. </i></figcaption>
+<img src="images/unanticipated.png"  style="width:12cm"/>
+</br>
+<i>Figure 2: Large language models have untancipated spontaneously emergent capabilities. </i>
 </p>
 
 ## Emergent Internal Computation
@@ -29,7 +33,9 @@ More problematically, some capabilities can be entirely *unanticipated*. Qualita
 Sometimes, interpretable emergent internal computation can emerge. Some self-supervised vision Transformers [learn to use self-attention to segment images](#vision_transformers), even without explicit segmentation supervision. This can be seen by producing saliency maps thresholding the self attentions maps to retain 60% of the probability mass. The vision transformer is able to learn an internal segmentation of images, even without being explicitly trained on this task.
 
 <p align=center>
-<img src="images/vision_transformers.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 3: Self-supervised Vision Transformers learn to use self-attention to segment images without explicitly training on this task. </i></figcaption>
+<img src="images/vision_transformers.png"  style="width:12cm"/>
+</br>
+<i>Figure 3: Self-supervised Vision Transformers learn to use self-attention to segment images without explicitly training on this task. </i>
 </p>
 
 ## Grokking 
@@ -37,7 +43,9 @@ Sometimes, interpretable emergent internal computation can emerge. Some self-sup
 [Grokking](#open_ai_grokking) is a phenomenon by which emergent capabilities may result from scaling the number of *optimization steps* rather than model size. Model's undergo a *phase transition*, suddenly generalizing and sharply increasing validation accuracy, after initially only memorizing and overfitting to training data. 
 
 <p align=center>
-<img src="images/grokking.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 4: Grokking on a modular division task </i></figcaption>
+<img src="images/grokking.png"  style="width:12cm"/>
+</br>
+<i>Figure 4: Grokking on a modular division task </i>
 </p>
 
 Recent work on [interpretability of grokking](#neelnanda) claims grokking is really all about phase changes. If one takes a task exhibiting phase changes, limit the data and regularising just enough such that the generalised solution is preferred over the memorised solution, we see grokking only marginally favours the generalising solution over the memorised solution. Furthermore, in the modular addition task studied, grokking is the model interpolating smoothly between the memorising and generalising solution, and not just some random walk.
@@ -70,17 +78,23 @@ Students are very familiar with proxy gaming. The university or schools goal to 
 One can find many examples of proxy gaming in the reinforcement learning paradigm. [CoinRun](#coinrun) is a Sonic the Hedgehog platformer inspired game in which the agent needs to reach a coin in a linear platform level. During training, this coin was always placed at the end of a level. If the coin is moved, we see the agent does not generalise, but instead just runs to the end of the level. It has learned a bad proxy.
 
 <p align=center>
-<img src="images/coin_run.gif"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 5: The training coin run task</i></figcaption>
+<img src="images/coin_run.gif"  style="width:12cm"/>
+</br>
+<i>Figure 5: The training coin run task</i>
 </p>
 
 <p align=center>
-<img src="images/coin_run_bad.gif"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 6: Coin run does not generalise</i></figcaption>
+<img src="images/coin_run_bad.gif"  style="width:12cm"/>
+</br>
+<i>Figure 6: Coin run does not generalise</i>
 </p>
 
 Another classic example is from a [boat racing game](#openai_boat). An RL agent was given the goal of achieving a high score in this game as a proxy for completing the circuit, but  instead found obtaining score through 'turbo boosting' on loop, and also crashing, burning, colliding into other boats, and going in the wrong direction... 
 
 <p align=center>
-<img src="images/boat.gif"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 7: Proxy gaming in a boat game</i></figcaption>
+<img src="images/boat.gif"  style="width:12cm"/>
+</br>
+<i>Figure 7: Proxy gaming in a boat game</i>
 </p>
 
 Recall *Le Châtelier's principle* from high school chemistry. This states that if a dynamic equilibrium is disturbed by changing the conditions, the position of equilibrium shifts to counteract the change to reestablish an equilibrium. In general this applies to many adaptive systems.
@@ -105,7 +119,9 @@ Deficient proxies seem ubiquitous. Further work could attempt to create optimiza
 [Pan et al. ](#pan) present a benchmark for detecting proxy gaming. They use four distinct environments: traffic control, glucose monitoring, covid response, and an Atari game. Here, we'll just discuss the traffic environment. An autonomous vehicle (AV) simulation models vehicles driving on a highway network, controlled by an RL policy. The RL agent has access to observations only from the AVs it controls i.e. the car's positive and velocity, and the position and velocity of the cars immediately in front and behind. The RL acts through modifying its AV's acceleration. 
 
 <p align=center>
-<img src="images/traffic.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 8: Schematic of the traffic control environment.</i></figcaption>
+<img src="images/traffic.png"  style="width:12cm"/>
+</br>
+<i>Figure 8: Schematic of the traffic control environment.</i>
 </p>
 
 Stronger optimizers, with more parameters or training steps may have access to a larger action space at finer resolution, so may better exploit misspecifications in this environment. Misspecifications are grouped into three classes:
@@ -116,13 +132,15 @@ reward use different desiderata to capture the same concept. Figure 8 shows this
 3. **Scope**. If monitoring velocity over all roads is too costly, a city might instead monitor them only over highways, thus pushing congestion to local streets. In general, scope misspecification occurs when the proxy measures desiderata over a restricted domain (e.g. time, space).
 
 <p align=center>
-<img src="images/traffic2.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 9: True reward vs proxy reward in benchmark environments. This shape of graph is characteristic of proxy gaming.</i></figcaption>
+<img src="images/traffic2.png"  style="width:12cm"/></br>
+<i>Figure 9: True reward vs proxy reward in benchmark environments. This shape of graph is characteristic of proxy gaming.</i>
 </p>
 
 A baseline to detect emergent proxy gaming is to use *policies as detectors*. One can measure the distance between a trusted policy, such as the Intelligent Driver Model, a widely accepted approximation of human driving behaviour and the learned policy. Three different methods of doing this are evaluated, using two measurements of effectiveness (AUROC and Max F-1), across several types of misspecification in various environments Traffic-Mer refers to the merge-in traffic problem discussed above. 
 
 <p align=center>
-<img src="images/traffic3.png"  style="width:12cm"/><figcaption aria-hidden="true"><i>Figure 10: Baseline detector scores in a number of proxy gameable environments.</i></figcaption>
+<img src="images/traffic3.png"  style="width:12cm"/></br>
+<i>Figure 10: Baseline detector scores in a number of proxy gameable environments.</i>
 </p>
 
 
