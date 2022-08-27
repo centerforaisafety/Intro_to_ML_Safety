@@ -1,9 +1,9 @@
-# Emergent Behaviour
+# Detecting Emergent Behaviour
 **Contributor(s): Bilal Chughtai**
 
-This lecture discusses emergent behaviour. Discussion surrounding emergent behaviour in AI Safety can sometimes be fairly speculative, so we ground our discussion with many examples and present work on detecting emergent proxy gaming.
+This lecture discusses emergent behaviour. Discussion surrounding emergent behaviour in AI Safety can sometimes be fairly speculative, so we ground our discussion with many examples and present some work on detecting emergent proxy gaming.
 
-It is difficult to ensure the safety of models if we do not know what they are capable of. Consider a programming bot that suddenly learns how to access the internet and hack as the bot is scaled to more parameters or compute. This rise in performance could be dangerous. Unfortunately, recent work has shown cases like this to be fairly common. Let's look at some distinct kidns of emergent capability - some of which are substantially more difficult to detect than others.
+It is difficult to ensure the safety of models if we do not know what they are capable of. Consider a programming bot that suddenly learns how to access the internet and hack as the bot is scaled to more parameters or compute. This rise in performance could be dangerous. Unfortunately, recent work has shown cases like this to be fairly common. Let's look at some distinct kinds of emergent capability. Some of these are substantially more difficult to detect than others.
 
 ## Performance Spikes
 
@@ -18,9 +18,9 @@ Some models possess quantitative capabilities that are hard to predict. For exam
 ## Unanticipated Behaviour
 
 More problematically, some capabilities can be entirely *unanticipated*. Qualitatively distinct capabilities may spontaneously emerge, even if we do not train models to have these capabilities explicitly; a key step towards general intelligence. Large language models, such as GPT-3, are trained to predict the next token in a sequence of words. We see empirically that as the number of parameters are scaled these models become capable of [performing tasks they were not explicitly trained on](#predictability_and_surprise), including
-* Three digit addition
-* [Massive multitask language understanding](#MMML): answering multiple choice questions on elementary mathematics, US history, computer science, law, and more
-* Program synthesis: writing code
+* Three digit addition.
+* [Massive multitask language understanding](#MMML): answering multiple choice questions on elementary mathematics, US history, computer science, law, and more.
+* Program synthesis: writing code.
 
 <p align=center>
 <img src="images/unanticipated.png"  style="width:12cm"/>
@@ -30,7 +30,7 @@ More problematically, some capabilities can be entirely *unanticipated*. Qualita
 
 ## Emergent Internal Computation
 
-Sometimes, interpretable emergent internal computation can emerge. Some self-supervised vision Transformers [learn to use self-attention to segment images](#vision_transformers), even without explicit segmentation supervision. This can be seen by producing saliency maps thresholding the self attentions maps to retain 60% of the probability mass. This leads to worries about potentially dangerous internal latent knowledge models may have.
+Sometimes, interpretable internal computation can emerge. Some self-supervised vision Transformers [learn to use self-attention to segment images](#vision_transformers), even without explicit segmentation supervision. This can be seen by producing saliency maps thresholding the self-attention maps to retain 60% of the probability mass. This leads to worries about potentially dangerous internal latent knowledge models may have.
 
 <p align=center>
 <img src="images/vision_transformers.png"  style="width:12cm"/>
@@ -48,7 +48,7 @@ Sometimes, interpretable emergent internal computation can emerge. Some self-sup
 <i>Figure 4: Grokking on a modular division task. Validation accuracy spontaneously increases after a certain number of optimization steps. </i>
 </p>
 
-Recent work on [interpretability of grokking](#neelnanda) claims grokking is really all about phase changes. If one takes a task exhibiting phase changes, limit the data and regularise just enough such that the generalised solution is preferred over the memorised solution, we see grokking. Furthermore, in the modular addition task studied, grokking can be interpreted as the model interpolating smoothly between the memorising and generalising solution, and not just some random walk in the reward space.
+Recent [interpretability work](#neelnanda) claims grokking is really all about phase changes. If one takes a task exhibiting phase changes, limits the data and regularises just enough such that the generalised solution is preferred over the memorised solution, we see grokking. Furthermore, grokking can be interpreted as the model interpolating smoothly between the memorising and generalising solution, and not just some random walk in the search space.
 
 ## Instrumental Goals
 Instrumental goals provide reason for us to want to better understand and detect emergent behaviour in future AI systems. Self-preservation is an instrumental goal of many biological creatures, institutions, and so likely also future powerful AI systems. It increases the probability any agent is able to accomplish its goals; an agent can't achieve it's goals if it's off or dead. A goal like this is said to be *instrumentally convergent* if it's so useful that it is a likely tendency for various sufficiently advanced agents to attain it. Other examples include seeking power, cognitive enhancement, and obtaining resources. One can imagine these to emerge suddenly if agents obtain the ability to plan suddenly.
@@ -66,12 +66,12 @@ Future work in detecting and forecasting emergent capabilities and goals could i
 ## Examples
 The *cobra effect* is an anecdote of an occurrence in India during British rule. The British government, concerned about the number of venomous cobras in Delhi, offered a bounty for every dead cobra. Initially, this was a successful strategy; large numbers of snakes were killed for the reward. Eventually, however, enterprising people began to breed cobras for the income. When the government became aware of this, the reward program was scrapped. When cobra breeders set their now-worthless snakes free, the wild cobra population further increased. Can you spot the proxy gaming? Incentivizing the proxy goal of dead cobras failed at achieving the objective of a reduced cobra population, as it was *over-optimized* or *gamed* through raising cobras for slaughter. 
 
-If one seeks to optimise website user satisfaction, a proxy may be the number of clicks. This can be gamed through promoting clickbait, or through addicting users. The AI agent does not care whether the content converges to the user's interests, or the users interests converge to the content. This observation has been termed [auto-induced distributional shift](#krueger) and has been shown to be detectable in principle.
+If one seeks to optimise website user satisfaction, a proxy may be the number of clicks. This can be gamed through promoting clickbait, or addicting users. The AI agent does not care whether the content converges to the user's interests, or the user's interests converge to the content. This observation has been termed [auto-induced distributional shift](#krueger) and has been shown to be detectable in principle.
 
 <p align=center>
 <img src="images/clickbait.png"  style="width:12cm"/>
 </br>
-<i>Figure 5: Clickbait is a pathway to radicalize users and change their preferences. The red paths of influence should be disincentized, while the green paths are okay. Image credit David Krueger.</i>
+<i>Figure 5: Clickbait is a pathway to radicalize users and change their preferences. The red paths of influence should be disincentivised, while the green paths are okay. Image credit David Krueger.</i>
 </p>
 
 One can find many examples of proxy gaming in the reinforcement learning paradigm. [CoinRun](#coinrun) is a Sonic the Hedgehog platformer inspired game in which the agent needs to reach a coin in a linear platform level. During training, this coin was always placed at the end of a level. If the coin is moved, we see the agent does not generalise, but instead just runs to the end of the level. It has learned a bad proxy.
@@ -117,12 +117,12 @@ Since deficient proxies seem ubiquitous, further work could attempt to create op
 
 ## A Proxy Gaming Detection Benchmark
 
-[Pan et al. ](#pan)(2022) present a benchmark for proxy gaming detectors. They use four distinct environments: traffic control, glucose monitoring, covid response, and an Atari game. Here, we'll just discuss the traffic environment. An autonomous vehicle (AV) simulation models vehicles driving on a highway network and is controlled by an RL policy. The RL agent has access to observations only from the AV it controls i.e. it's position and velocity, and the position and velocity of the cars immediately in front and behind. The RL agent acts through modifying its AV's acceleration. 
+[Pan et al. (2022)](#pan) present a benchmark for proxy gaming detectors. They use four distinct environments: traffic control, glucose monitoring, covid response, and an Atari game. Here, we'll just discuss the traffic environment. An autonomous vehicle (AV) simulation models vehicles driving on a highway network and is controlled by an RL policy. The RL agent has access to observations only from the AV it controls i.e. it's position and velocity, and the position and velocity of the cars immediately in front and behind. The RL agent acts through modifying its AV's acceleration. 
 
 <p align=center>
 <img src="images/traffic.png"  style="width:12cm"/>
 </br>
-<i>Figure 8: Schematic of the traffic control environment.</i>
+<i>Figure 8: Schematic of the traffic control environment. Image credit Pan et al. (2022).</i>
 </p>
 
 Stronger optimizers, with more parameters or training steps, may have access to a larger action space at finer resolution, so may better exploit misspecifications in this environment, which are grouped into three classes:
@@ -134,19 +134,19 @@ reward use different desiderata to capture the same concept. Figure 8 shows this
 
 <p align=center>
 <img src="images/traffic2.png"  style="width:12cm"/></br>
-<i>Figure 9: True reward vs proxy reward in benchmark environments. This shape of true vs proxy reward graph is characteristic of emergent proxy gaming.</i>
+<i>Figure 9: True reward vs proxy reward in benchmark environments. This shape of true vs proxy reward graph is characteristic of emergent proxy gaming. Image credit Pan et al. (2022).</i>
 </p>
 
 A baseline to detect emergent proxy gaming is to use *policies as detectors*. One can measure the distance between a trusted policy, such as the Intelligent Driver Model, a widely accepted approximation of human driving behaviour, and the learned policy. Three different methods of doing this are evaluated, using two measurements of effectiveness (AUROC and Max F-1), across several types of misspecification in various environments. Traffic-Mer refers to the merge-in traffic problem discussed above. 
 
 <p align=center>
 <img src="images/traffic3.png"  style="width:12cm"/></br>
-<i>Figure 10: Baseline detector scores in a number of proxy gameable environments.</i>
+<i>Figure 10: Baseline detector scores in a number of proxy gameable environments. Image credit Pan et al. (2022).</i>
 </p>
 
 # Conclusion
 
-In this chapter, we discuss the problems of emergent behaviour. We provide several motivating examples, and offer some potential future work directions. We then discuss proxy gaming and the dangers of over optimizing even subtly incorrect reward functions. We then discuss one approach to detecting emergent proxy gaming.
+In this chapter, we discuss the problems of emergent behaviour. We provide several motivating examples, and offer some potential future work directions. We then discuss proxy gaming and the dangers of over optimizing even subtly incorrect reward functions. Finally we discuss one approach to detecting emergent proxy gaming.
 
 
 # References
