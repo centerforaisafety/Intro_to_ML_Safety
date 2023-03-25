@@ -25,7 +25,7 @@ We can try to locate salient tokens - what tokens were the most important for th
 
 There isn't a canonical saliency map for text. Saliency maps for text are helpful for writing adversarial examples.
 # Feature Visualization
-The goal of feature visualization is to understand what a model's internal component detects. We can do this by synthesizing an image through gradient descent that maximizes said target component. For instance, if we want to 'visualize' a neuron, we attempt to generate an input which maximizes the neuron's activation. (We can do this through gradient descent). We also visualize Channels, as well (which are more informative)
+The goal of feature visualization is to understand what a model's internal component detects. We can do this by synthesizing an image through gradient descent that maximizes said target component. For instance, if we want to 'visualize' a neuron, we attempt to generate an input which maximizes the neuron's activation. We also visualize Channels, as well (which are more informative)
 
 ![](images/FeatureVisualization.png)
 *Image from OpenAI*
