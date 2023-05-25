@@ -1,6 +1,9 @@
 ![](images/DALL·E%202023-05-25%2015.50.01%20-%20synthwave%20mural%20of%20puzzle,%20scientific,%204k,%20futuristic,%20neon.png)
+
 # Risk Decomposition
 **Contributor(s): Cody Rushing**
+
+*Note: these notes largely replicate what associated video says, but have a few additional comments and links to examples (Cody encourages people to add more information as they see fit). They are written and organized to (hopefully) provide a different perspective on the content, and to clear up any confusions the video may have posed.*
 
 To effectively approach making systems safer, we need some sort of structure to guide our thinking. Making Machine Learning systems safer isn't trivial; It's not exactly like fixing a car, nor is it exactly like debugging code. 
 
@@ -49,7 +52,7 @@ For instance, most of the 'Hazard' portion of the risk posed by ML systems stems
 
 The Vulnerability portion of the risk can be characterized by the **Robustness** research field. Robustness considers how we can withstand hazards (and thus, how we can reduce our vulnerability to them).
 
-Finally, the Hazard Exposure portion of the risk is characterized by the **Monitoring** research field, which is concerned with identifying hazards. When we can identify a potential hazard, the risk gets lower as we can take steps to limit our exposure to them. A relevant example of this is the work [ARC Evals ](https://evals.alignment.org/) focuses on, and their role in evaluating GPT-4 to attempt to detect hazards.
+Finally, the Hazard Exposure portion of the risk is characterized by the **Monitoring** research field, which is concerned with identifying hazards. When we can identify a potential hazard, the risk gets lower as we can take steps to limit our exposure to them. A relevant example of this is the work [ARC Evals ](https://evals.alignment.org/) focuses on, and their role in evaluating GPT-4 to attempt to detect hazards[^2].
 
 The broader field of Systemic Safety is concerned with how to simultaneously reduce multiple components of the risk factor equation simultaneously, and is focused on reducing systemic risks. These concern areas such as ML for Improved Epistemics, ML for Improved Cyberdefense, and Cooperative AI.
 
@@ -71,3 +74,4 @@ There is an important distinction between estimating and reducing risk that need
 In these situations, it is far more valuable to instead identify ways to reduce vulnerabilities, exposure, and hazards (and *then* futher prioritize, respond, and assess the hazard). We don't want to burn time getting a more precise estimate of the risk if it causes us to be unable to address it.
 
 [^1]: See [this paper](https://arxiv.org/abs/1811.11553) for an example of brittleness in AI image classifiers, who fail to classify rotated images
+[^2]: See part D, section 1.1: "Overview of findings and mitigations" of the [Technical GPT-4 report](https://arxiv.org/pdf/2303.08774.pdf) to see a broad overview of this
