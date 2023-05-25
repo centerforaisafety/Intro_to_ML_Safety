@@ -145,7 +145,7 @@ An alternative to fully connected networks with weight matrices is convolution. 
 <img src="images/convolution.png" id="fig:modern" style="width:14cm"/><figcaption aria-hidden="true"><i>Figure 8: The inner product between the convolutional kernel and activations are taken at every position, forming the output on the right (in teal) </i></figcaption>
 </p>
 
-Convolution uses less parameters than fully-connected layers, as the same kernel is reapplied across the entire input. Convolution is also translation equivariant - if a portion of an image is shifted one pixel to the right, a kernel can just detect it by shifting itself to the right as well, while a fully-connected layer must relearn its weight matrix. Thus, convolutions are useful in vision tasks, where objects could be shifted around in an image and still hold the same meaning.
+Convolution uses fewer parameters than fully-connected layers, as the same kernel is reapplied across the entire input. Convolution is also translation equivariant - if a portion of an image is shifted one pixel to the right, a kernel can just detect it by shifting itself to the right as well, while a fully-connected layer must relearn its weight matrix. Thus, convolutions are useful in vision tasks, where objects could be shifted around in an image and still hold the same meaning.
 
 
 Further exploration:
