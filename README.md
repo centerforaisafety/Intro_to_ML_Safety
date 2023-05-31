@@ -12,14 +12,14 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 |-----------------------------------------------------------|----------------|--------------------|
 | Introduction                                              | Not started    |                    |
 | [Deep Learning Review](/Deep%20Learning%20Review)         |Ready for Review| Nathaniel Li       |
-| Risk Decomposition                                        | Not started    |                    |
+| [Risk Decomposition](/Risk%20Decomposition/)                                        | Ready for Review    |  Cody Rushing   |
 | Accident Models                                           | Not started    |                    |
 | Black Swans                                               | Not started    |                    |
 | [Adversarial Robustness](/Adversarial%20Robustness)       | Needs revision | Oliver Zhang       |
 | [Black Swan Robustness](/Black%20Swan%20Robustness)       | Needs revision | Oliver Zhang       |
 | [Anomaly Detection](/Anomaly%20Detection)                 | Needs revision | Oliver Zhang       |
 | [Interpretable Uncertainty](/Interpretable%20Uncertainty) | Needs revision | Oliver Zhang       |
-| Transparency                                              | Not started    |                    |
+| [Transparency](/Transparency/)                                              | Ready for Review   | Cody Rushing     |
 | [Trojans](/Trojans)                                                   | Ready for Review    | Ethan Gutierrez    |
 | [Detecting Emergent Behaviour](Detecting%20Emergent%20Behaviour) | Ready for Review    | Bilal Chughtai     |
 | Honest Models                                             | Not started    |                    |
