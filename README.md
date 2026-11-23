@@ -11,7 +11,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 |    **Lecture**                                            |    **Status**  | **Contributor(s)** |
 |-----------------------------------------------------------|----------------|--------------------|
 | Introduction                                              | Not started    |                    |
-| [Deep Learning Review](/Deep%20Learning%20Review)         |Ready for Review| Nathaniel Li       |
+| [Deep Learning Review](/Deep%20Learning%20Review)         |Ready for Review|        |
 | [Risk Decomposition](/Risk%20Decomposition/)                                        | Ready for Review    |  Cody Rushing   |
 | Accident Models                                           | Not started    |                    |
 | Black Swans                                               | Not started    |                    |
@@ -25,7 +25,7 @@ Some prelimary notes on some of the topics already exist, but they aren't comple
 | Honest Models                                             | Not started    |                    |
 | Intrasystem Goals or Power Aversion                       | Not started    |                    |
 | Machine Ethics                                            | Not started    |                    |
-| [ML for Improved Decision-Making](ML%20for%20Improved%20Decision-Making)   | Ready for Review    | Nathaniel Li       |
+| [ML for Improved Decision-Making](ML%20for%20Improved%20Decision-Making)   | Ready for Review    |        |
 | ML for Cyberdefense                                       | Not started    |                    |
 | [Cooperative AI](Cooperative%20AI)                                            | Ready for Review | Bilal Chughtai     |
 | X-Risk                                                    | Not started    |                    |
