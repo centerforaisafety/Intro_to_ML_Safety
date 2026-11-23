@@ -1,5 +1,4 @@
 # ML for Improved Decision-Making
-**Contributor(s): Nathaniel Li**
 <br />
 <blockquote>
     <p><a href=https://www.lesswrong.com/posts/QtyKq4BDyuJ3tysoK/9-26-is-petrov-day>Today we celebrate</a> not destroying the world. We do so today because 38 years ago, Stanislav Petrov made a decision that averted tremendous calamity. It's possible that an all-out nuclear exchange between the US and USSR would not have actually destroyed the world, but there are few things with an equal chance of doing so.<br /><br />
