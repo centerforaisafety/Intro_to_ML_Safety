@@ -1,5 +1,4 @@
 # Deep Learning Review
-**Contributor(s): Nathaniel Li**
 
 This is a review of the ML Safety Scholars deep learning module. Understanding deep learning is [important](https://forum.effectivealtruism.org/posts/7WXPkpqKGKewAymJf/how-to-pursue-a-career-in-technical-ai-alignment#Activities_that_are_useful_for_both_empirical_research_leads_and_contributors) for ML Safety, as it is the dominant paradigm within machine learning. This is a review, not an introduction to deep learning - instead, ML Safety Scholars suggests the first thirteen lectures of [EECS 498-007/598-005](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2019/schedule.html) as its introductory deep learning curriculum, and [here](https://forum.effectivealtruism.org/posts/7WXPkpqKGKewAymJf/how-to-pursue-a-career-in-technical-ai-alignment#Basic_deep_learning) are additional resources.
 
@@ -167,9 +166,9 @@ Further exploration:
 * https://medium.com/augmented-startups/convnext-the-return-of-convolution-networks-e70cbe8dabcc
 
 ## Self-Attention and Transformer Blocks
-Nathaniel could never explain self-attention as succinctly as this [high level overview](https://www.youtube.com/watch?v=-9vVhYEXeyQ) or [more thorough explanation](https://jalammar.github.io/illustrated-transformer/), so please check out these amazing resources and the original paper (Vaswani et al. 2017). Additionally, here is a drawing of the flow of attention and the dimensions at every step:
+For self-attention, see this [high level overview](https://www.youtube.com/watch?v=-9vVhYEXeyQ) or [more thorough explanation](https://jalammar.github.io/illustrated-transformer/), and the original paper (Vaswani et al. 2017). Additionally, here is a drawing of the flow of attention and the dimensions at every step:
 <p align=center>
-<img src="images/attention_diagram.png" id="fig:modern" style="width:20cm"/><figcaption aria-hidden="true"><i>Figure 10: Please forgive Nathaniel's atrocious handwriting. Figure from Nathaniel Li</i></figcaption>
+<img src="images/attention_diagram.png" id="fig:modern" style="width:20cm"/><figcaption aria-hidden="true"><i>Figure 10: A drawing of the flow of attention and the dimensions at every step.</i></figcaption>
 </p>
 
 Transformer blocks build upon the self-attention mechanism and have become a critical building block of most modern language models. They consist of self-attention and MLP layers, with residual connections and layer normalization between both layers.
